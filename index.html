@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trivia</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="startscren " id="startscren">
+            <div class="title">
+                <h1>welcome to trivia Game</h1>
+            </div>
+            <div class="selectc">
+                <select name="category" id="category">
+                    <option value="category">category</option>
+                    <option value="artliterature">artliterature</option>
+                    <option value="sciencenature">sciencenature</option>
+                    <option value="geography">geography</option>
+                    <option value="entertainment">entertainment</option>
+                    <option value="music">music</option>
+                </select>
+                <button onclick="start()">start</button>
+            </div>
+        </div>
+        <div class="gamescreen scrrenoff" id="gamescreen">
+            <div class="score">
+                <h2>category <span id="catid"></span></h2>
+                <h2>score <span id="scoreid">0</span></h2>
+            </div>
+            <div class="qsection">
+                <p>Question:</p>
+                <h4 id="qh4">Loading...</h4>
+            </div>
+            <div class="asesction">
+                <label for="your answer">your answer</label>
+                <input type="text" id="answerInput">
+                <button onclick="checkAns()">Check</button>
+            </div>
+        </div>
+
+        <div id="customAlert" class="modal">
+            <div class="modal-content">
+                <span id="alertMessage"></span>
+                <button onclick="closeAlert()">OK</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</body>
+</html>
